@@ -77,7 +77,6 @@ header {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    margin-left: -100px;
 }
 
 .nav-account img {
@@ -93,7 +92,10 @@ header {
     cursor: pointer;
 }
 
-@media (min-width:950px) {
+
+
+
+@media (max-width:950px) {
 
     .nav__items {
         display: none;
@@ -107,7 +109,7 @@ header {
     
 }
 
-@media (min-width:415px) {
+@media (max-width:420px) {
 
     .nav__items {
         display: none;
@@ -117,7 +119,11 @@ header {
         display: block;
     }
     
+    .nav-account img {
+        width: 40px;
+        height: auto;
 
+    }
     
 }
 
@@ -128,37 +134,129 @@ header {
 /* HOT START */
 
 .hot__banner{
-
+    position: relative;
     width: 100%;
     height: 80vh;
 
-    background: url(banner-pic.jpg) center no-repeat;
+    background: url(banner-pic.jpg);
     background-size: cover;
+    background-position: 50% 50%;
 
-
-    color: white;
-    font-size: 24px;
-    font-weight: 500;
-    
     display: flex;
-    align-items: end;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+}
+
+.banner__cover{
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    backdrop-filter: brightness(50%);
+}
+
+.banner-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    z-index: 1;
+}
+
+.hot__banner h3{
+    text-transform: uppercase;
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+
+    text-align: center;
+
+    margin-bottom: 15px;
+
+    border: 5px solid white;
+    padding: 10px;
 }
 
 .hot__banner p{
-    margin-left: 30px;
-    margin-bottom: 20px;
+    width: 400px;
+    color: white;
+    font-size: 22px;
+    font-weight: 400;
 
-    padding: 10px;
-    border: 4px solid white;
-
-    cursor: pointer;
+    text-align: center;
 }
 
-.hot__banner span{
-    color: rgb(170, 169, 169);
-    text-decoration: line-through;
+@media (max-width:563px) {
+
+
+    .hot__banner h3{
+
+        width: 60%;
+
+        font-size: 18px;
+        font-weight: 700;
+
+    
+        border: 5px solid white;
+        padding: 7px;
+    }
+    
+    .hot__banner p{
+        width: 200px;
+        color: white;
+        font-size: 14px;
+        font-weight: 400;
+    
+        text-align: center;
+    }
+
+
+    
 }
+
+@media (max-width:450px) {
+
+    .hot__banner{
+
+        width: 100%;
+
+    
+        background: url(banner-pic.jpg)  no-repeat;
+        background-size: cover;
+
+        background-position: 50% 50%;
+
+    }
+    
+
+    .hot__banner h3{
+
+        width: 65%;
+
+        font-size: 22px;
+        font-weight: 700;
+
+    
+        border: 5px solid white;
+        padding: 7px;
+    }
+    
+    .hot__banner p{
+        width: 200px;
+        color: white;
+        font-size: 14px;
+        font-weight: 400;
+    
+        text-align: center;
+    }
+
+    
+}
+
+
 
 
 /* HOT END */
@@ -169,6 +267,10 @@ header {
 .recent__list{
     color: white;
     letter-spacing: 2px;
+}
+
+.recent__list h1{
+    margin-bottom: 20px;
 }
 
 .recent__items{
@@ -186,12 +288,81 @@ header {
     height: 150px;
 
     background-color: aqua;
-    border-bottom: 4px solid orange;
+    border-bottom: 5px solid orange;
+
+    color: black;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+
+    font-size: 12px;
+    font-weight: 600;
+
 }
 
-.quarter{
+
+@media (max-width:810px) {
+
+    .recent__items{
+
+        margin-top: 15px;
+    
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+    }
+    
+    .rec__item{
+        width: 400px;
+        height: 200px;
+    
+        background-color: aqua;
+        border-bottom: 5px solid orange;
+    
+        color: black;
+        display: flex;
+        align-items: end;
+        justify-content: end;
+    
+        font-size: 12px;
+        font-weight: 600;
+    
+    }
+    
+    h1{
+        text-align: center;
+    }
+
+    
+}
+
+@media (max-width:450px) {
+
+    .rec__item{
+        width: 200%;
+        height: 150px;
+    
+        background-color: aqua;
+        border-bottom: 5px solid orange;
+    
+        color: black;
+        display: flex;
+        align-items: end;
+        justify-content: end;
+    
+        font-size: 12px;
+        font-weight: 600;
+    
+    }
+
     
 }
 
 
 /* RECENTLY WATCHED END */
+
+
+footer{
+    margin-top: 100px;
+}
