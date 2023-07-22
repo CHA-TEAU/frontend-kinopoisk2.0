@@ -189,12 +189,12 @@ header {
     text-align: center;
 }
 
-@media (max-width:563px) {
+@media (max-width:635px) {
 
 
     .hot__banner h3{
 
-        width: 60%;
+        width: 80%;
 
         font-size: 18px;
         font-weight: 700;
@@ -234,7 +234,7 @@ header {
 
     .hot__banner h3{
 
-        width: 65%;
+        width: 80%;
 
         font-size: 22px;
         font-weight: 700;
@@ -284,8 +284,8 @@ header {
 }
 
 .rec__item{
-    width: 300px;
-    height: 150px;
+    width: 240px;
+    height: 120px;
 
     background-color: aqua;
     border-bottom: 5px solid orange;
